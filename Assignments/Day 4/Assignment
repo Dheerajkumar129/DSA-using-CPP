@@ -1,0 +1,54 @@
+//Assignment -> Define a Book class with a constructor to initialise its properties(title, author, year, price) and a method displayInfo
+
+#include<iostream>
+using namespace std;
+
+class Book{
+
+    public:
+    string title;
+    string author;
+    int year;
+    int price;
+
+    Book(){
+        cout << "Book Information" << endl;    
+    }
+    Book(string titl, string auth, int yr, int pr){
+        title = titl;
+        author = auth;
+        year = yr;
+        price = pr;
+    }
+
+    void print(){
+        cout << "Title: " << title << endl;
+        cout << "Author: " << author << endl;
+        cout << "Year: " << year << endl;
+        cout << "Price: " << price << endl;
+
+    }
+};
+
+int main(){
+
+    cout << "----------Book1 Information----------" << endl;
+
+    Book b1("The Power of your subconscious mind", "Joseph Murphy", 1963, 200);
+    b1.title = "The Power of your subconscious mind";
+    b1.author = "Joseph Murphy";
+    b1.year = 1963;
+    b1.price = 200;
+    b1.print();
+
+    cout << "\n";
+
+    cout << "----------Book2 Information----------" << endl;
+
+    Book b2("Harry Potter and the Philosopher's Stone", "J.K. Rowling", 1997, 225);
+    b2.title = "Harry Potter and the Philosopher's Stone";
+    b2.author = "J.K. Rowling";
+    b2.year = 1997;
+    b2.price = 225;
+    b2.print();
+}
